@@ -3,9 +3,8 @@
 $connection = mysqli_connect("localhost", "root", "", "db_ballposition");
 
 
-if(isset($_POST['save_position1']))
+if(isset($_POST['save_position']))
 {
-    echo 'this is working';
     $query = "INSERT INTO ball_coordinates(x, y, z) VALUES ('$_POST[x]','$_POST[y]','$_POST[z]')";
     
 
@@ -20,9 +19,8 @@ if(isset($_POST['save_position1']))
     
     
 }
-else{
-    echo 'not';
-}
+
+
 
 ?>
 
@@ -50,7 +48,7 @@ else{
 <body>
     <div id="ui">
         <p>Current Position: <span id="position">(0, 0, 0)</span></p>
-        <form id="positionForm" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" >
+        <form method="post" action="" id="positionForm">
             <label for="x">X:</label>
             <input type="number" id="x" name="x" step="0.1" required>
             <label for="y">Y:</label>
