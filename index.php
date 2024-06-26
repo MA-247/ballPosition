@@ -20,14 +20,14 @@
 <body>
     <div id="ui">
         <p>Current Position: <span id="position">(0, 0, 0)</span></p>
-        <form id="positionForm">
+        <form id="positionForm" method="post">
             <label for="x">X:</label>
             <input type="number" id="x" name="x" step="0.1" required>
             <label for="y">Y:</label>
             <input type="number" id="y" name="y" step="0.1" required>
             <label for="z">Z:</label>
             <input type="number" id="z" name="z" step="0.1" required>
-            <button type="submit">Update Position</button>
+            <button name='save_position' type="submit">Update Position</button>
         </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
